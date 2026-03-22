@@ -1,0 +1,121 @@
+## 📚 Project: Decentralized Bookmark Manager
+
+### 🧠 Overview
+
+In this project, you will build a **Decentralized Bookmark Manager (dApp)** that allows users to save, manage, and retrieve their personal bookmarks directly on the blockchain.
+
+Unlike traditional apps where data is stored in centralized databases, this application will store bookmark data on-chain and associate it with a user’s wallet address. This means each user fully owns their data and can access it from anywhere using their wallet.
+
+---
+
+### 🎯 Objective
+
+Your goal is to design and build a full-stack dApp that enables users to:
+
+* Connect their wallet
+* Add bookmarks (title, URL, tag)
+* View their saved bookmarks
+* Delete bookmarks
+
+---
+
+### ⚙️ Core Features (Minimum Requirements)
+
+#### 1. Wallet Connection
+
+* Users must connect their wallet (e.g., MetaMask)
+* All actions should be tied to the connected wallet address
+
+#### 2. Add Bookmark
+
+* Users can input:
+
+  * Title
+  * URL
+  * Tag (optional)
+* Data should be stored on-chain via a smart contract
+
+#### 3. View Bookmarks
+
+* Display all bookmarks associated with the connected wallet
+* Each bookmark should show:
+
+  * Title (clickable link)
+  * URL
+  * Tag
+
+#### 4. Delete Bookmark
+
+* Users should be able to remove bookmarks they created
+
+---
+
+### 🧱 Technical Requirements
+
+#### Smart Contract
+
+* Use Solidity
+* Store bookmarks using:
+
+  * `struct` for bookmark data
+  * `mapping(address => Bookmark[])` for user-specific storage
+* Implement functions:
+
+  * Add bookmark
+  * Get bookmarks
+  * Delete bookmark
+
+#### Frontend
+
+* Build a simple UI (React or plain HTML/JS)
+* Integrate wallet connection
+* Interact with the smart contract using a Web3 library (e.g., viem or ethers)
+
+#### Deployment
+
+* Deploy your contract to a testnet (e.g., Sepolia)
+* Connect your frontend to the deployed contract
+
+---
+
+### ⚠️ Important Concepts to Understand
+
+* **Blockchain Storage is Expensive**
+  Only store necessary data. Avoid unnecessary duplication.
+
+* **User Identity = Wallet Address**
+  No login system is required. The wallet is the identity.
+
+* **No Traditional Database**
+  All data comes from the blockchain.
+
+---
+
+### ⭐ Bonus Features (Optional)
+
+To go beyond the basics, you can implement:
+
+* Tag filtering (e.g., show only “work” bookmarks)
+* Edit bookmark functionality
+* Public vs private bookmarks
+* Search functionality
+* Store bookmark data using IPFS instead of directly on-chain
+
+---
+
+### 🧪 Expected Outcome
+
+By the end of this project, I should have:
+* A deployed smart contract
+* A working frontend interface
+* A complete dApp where users can manage bookmarks using their wallet
+
+---
+
+### 🧠 Work Flow
+
+* Smart contract development (Solidity)
+* Frontend ↔ blockchain interaction
+* Wallet-based authentication
+* On-chain data storage patterns
+* Basic dApp architecture
