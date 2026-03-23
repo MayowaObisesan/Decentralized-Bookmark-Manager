@@ -1,0 +1,13 @@
+{
+  "name": "bookmark-hardhat",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "hardhat run scripts/deploy.js --network rootstockTestnet"
+  },
+  "devDependencies": {
+    "hardhat": "^2.22.17",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "ethers": "^6.0.0"
+  }
+}
