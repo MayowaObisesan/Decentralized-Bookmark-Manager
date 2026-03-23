@@ -1,10 +1,7 @@
 require("@nomicfoundation/hardhat-ethers");
 
-const PRIVATE_KEY = process.env.DEPLOYER_PRIVATE_KEY;
-const RPC_URL = process.env.VITE_RPC_URL;
-
-if (!PRIVATE_KEY) throw new Error("DEPLOYER_PRIVATE_KEY not set");
-if (!RPC_URL) throw new Error("VITE_RPC_URL not set");
+const PRIVATE_KEY = process.env.DEPLOYER_PRIVATE_KEY || "0x0000000000000000000000000000000000000000000000000000000000000001";
+const RPC_URL = process.env.VITE_RPC_URL || "https://public-node.testnet.rsk.co";
 
 const formattedKey = PRIVATE_KEY.startsWith("0x") ? PRIVATE_KEY : `0x${PRIVATE_KEY}`;
 
