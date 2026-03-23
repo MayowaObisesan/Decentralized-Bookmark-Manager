@@ -6,6 +6,8 @@ const RPC_URL = process.env.VITE_RPC_URL;
 if (!PRIVATE_KEY) throw new Error("DEPLOYER_PRIVATE_KEY not set");
 if (!RPC_URL) throw new Error("VITE_RPC_URL not set");
 
+const formattedKey = PRIVATE_KEY.startsWith("0x") ? PRIVATE_KEY : `0x${PRIVATE_KEY}`;
+
 module.exports = {
   solidity: {
     version: "0.8.20",
@@ -17,7 +19,7 @@ module.exports = {
     rootstockTestnet: {
       url: RPC_URL,
       chainId: 31,
-      accounts: [PRIVATE_KEY.startsWith("0x") ? PRIVATE_KEY : `0x${PRIVATE_KEY}`],
+      accounts: [formattedKey],
     },
   },
 };
